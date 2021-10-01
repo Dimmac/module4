@@ -216,3 +216,266 @@ const books = [
 // Change code below this line
 
 const titles = books.map((book) => book.title);
+//16
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["adventure", "history"],
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    genres: ["fiction"],
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    genres: ["horror", "mysticism"],
+  },
+];
+// Change code below this line
+
+const genres = books;
+//answer
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["adventure", "history"],
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    genres: ["fiction"],
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    genres: ["horror", "mysticism"],
+  },
+];
+// Change code below this line
+
+const genres = books.flatMap((book) => book.genres);
+//17
+// Change code below this line
+const getUserNames = (users) => {};
+// Change code above this line
+//answer
+// Change code below this line
+const getUserNames = (users) => users.map((user) => user.name);
+// Change code above this line
+//18
+// Change code below this line
+const getUserEmails = (users) => {};
+// Change code above this line
+//18
+// Change code below this line
+const getUserEmails = (users) => {};
+// Change code above this line
+//answer
+const getUserEmails = (users) => {
+  return users.map((user) => user.email);
+};
+//19 answer
+const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// Change code below this line
+
+const evenNumbers = numbers.filter((number) => number % 2 === 0);
+const oddNumbers = numbers.filter((number) => number % 2 !== 0);
+//20 answer
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["adventure", "history"],
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    genres: ["fiction", "mysticism"],
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    genres: ["horror", "mysticism", "adventure"],
+  },
+];
+// Change code below this line
+const allGenres = books.flatMap((book) => book.genres);
+const uniqueGenres = allGenres.filter(
+  (genre, index, array) => array.indexOf(genre) === index
+);
+//21
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+];
+
+const MIN_RATING = 8;
+const AUTHOR = "Bernard Cornwell";
+// Change code below this line
+
+const topRatedBooks = books;
+const booksByAuthor = books;
+//answer
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+];
+
+const MIN_RATING = 8;
+const AUTHOR = "Bernard Cornwell";
+// Change code below this line
+
+const topRatedBooks = books.filter(({ rating }) => rating >= MIN_RATING);
+const booksByAuthor = books.filter((book) => book.author === AUTHOR);
+//22
+const getUsersWithEyeColor = (users, color) => {};
+//answer
+// Change code below this line
+const getUsersWithEyeColor = (users, color) => {
+  return users.filter(({ eyeColor }) => eyeColor === color);
+};
+//23
+// Change code below this line
+const getUsersWithAge = (users, minAge, maxAge) => {};
+//answer
+// Change code below this line
+const getUsersWithAge = (users, minAge, maxAge) => {
+  return users.filter(({ age }) => age > minAge && age < maxAge);
+};
+// Change code above this line
+//24
+const getUsersWithFriend = (users, friendName) => {};
+answer;
+const getUsersWithFriend = (users, friendName) => {
+  return users.filter(({ friends }) => friends.includes(friendName));
+};
+//25
+const getFriends = (users) => {
+  const allFriends = users.flatMap((user) => user.friends);
+  const uniqueFriends = allFriends.filter(
+    (friend, index, array) => array.indexOf(friend) === index
+  );
+  return uniqueFriends;
+};
+//or
+const getFriends = (users) => {
+  return users
+    .flatMap((user) => user.friends)
+    .filter((friend, index, array) => array.indexOf(friend) === index);
+};
+//26
+const getActiveUsers = (users) => {};
+//answer
+const getActiveUsers = (users) => {
+  return users.filter(({ isActive }) => isActive === true);
+};
+//answer
+const getInactiveUsers = (users) => {
+  return users.filter(({ isActive }) => !isActive === true);
+};
+//28
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+];
+const BOOK_TITLE = "The Dream of a Ridiculous Man";
+const AUTHOR = "Robert Sheckley";
+// Change code below this line
+
+const bookWithTitle = books;
+const bookByAuthor = books;
+//answer
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+];
+const BOOK_TITLE = "The Dream of a Ridiculous Man";
+const AUTHOR = "Robert Sheckley";
+// Change code below this line
+
+const bookWithTitle = books.find(({ title }) => title === BOOK_TITLE);
+const bookByAuthor = books.find(({ author }) => author === AUTHOR);
+//29
+const getUserWithEmail = (users, email) => {
+  return users.find((user) => user.email === email);
+};
+//30
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// Change code below this line
+
+const eachElementInFirstIsEven = firstArray.every((value) => value % 2 === 0);
+const eachElementInFirstIsOdd = firstArray.every((value) => value % 2 !== 0);
+
+const eachElementInSecondIsEven = secondArray.every((value) => value % 2 === 0);
+const eachElementInSecondIsOdd = secondArray.every((value) => value % 2 !== 0);
+
+const eachElementInThirdIsEven = thirdArray.every((value) => value % 2 === 0);
+const eachElementInThirdIsOdd = thirdArray.every((value) => value % 2 !== 0);
+//31
+const isEveryUserActive = (users) => {
+  return users.every((value) => value.isActive === true);
+};
