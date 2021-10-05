@@ -479,3 +479,151 @@ const eachElementInThirdIsOdd = thirdArray.every((value) => value % 2 !== 0);
 const isEveryUserActive = (users) => {
   return users.every((value) => value.isActive === true);
 };
+//32
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// Change below this line
+
+const anyElementInFirstIsEven = firstArray.some((value) => value % 2 === 0);
+const anyElementInFirstIsOdd = firstArray.some((value) => value % 2 !== 0);
+
+const anyElementInSecondIsEven = secondArray.some((value) => value % 2 === 0);
+const anyElementInSecondIsOdd = secondArray.some((value) => value % 2 !== 0);
+
+const anyElementInThirdIsEven = thirdArray.some((value) => value % 2 === 0);
+const anyElementInThirdIsOdd = thirdArray.some((value) => value % 2 !== 0);
+//33
+const isAnyUserActive = (users) => {
+  return users.some((user) => user.isActive === true);
+};
+//34
+const players = {
+  mango: 1270,
+  poly: 468,
+  ajax: 710,
+  kiwi: 244,
+};
+const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// Change code below this line
+
+const totalPlayTime = playtimes.reduce((previousValue, number) => {
+  return previousValue + number;
+}, 0);
+
+// Change code above this line
+const averagePlayTime = totalPlayTime / playtimes.length;
+//35
+const players = [
+  { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+  { name: "Poly", playtime: 469, gamesPlayed: 2 },
+  { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+  { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+];
+// Change code below this line
+
+const totalAveragePlaytimePerGame = players.reduce((total, player) => {
+  return total + player.playtime / player.gamesPlayed;
+}, 0);
+//36
+const calculateTotalBalance = (users) => {};
+//aswer
+const calculateTotalBalance = (users) => {
+  return users.reduce((total, user) => total + user.balance, 0);
+};
+//37
+// const UnionUsers = users.flatMap((el) => users.el);
+const getTotalFriendCount = (users) => {
+  return users.reduce((total, user) => total + user.friends.length, 0);
+};
+///38
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+  "Tanith Lee",
+  "Bernard Cornwell",
+  "Robert Sheckley",
+  "Fyodor Dostoevsky",
+];
+// Change code below this line
+
+const ascendingReleaseDates = releaseDates;
+
+const alphabeticalAuthors = authors;
+//answer
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+  "Tanith Lee",
+  "Bernard Cornwell",
+  "Robert Sheckley",
+  "Fyodor Dostoevsky",
+];
+// Change code below this line
+
+const ascendingReleaseDates = [...releaseDates].sort();
+
+const alphabeticalAuthors = [...authors].sort();
+//39
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// Change code below this line
+
+const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+
+const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+//40
+const authors = [
+  "Tanith Lee",
+  "Bernard Cornwell",
+  "Robert Sheckley",
+  "Fyodor Dostoevsky",
+  "Howard Lovecraft",
+];
+// Change code below this line
+
+const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+
+const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+//41
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+];
+// Change code below this line
+
+const sortedByAuthorName = [...books].sort((a, b) =>
+  a.author.localeCompare(b.author)
+);
+
+const sortedByReversedAuthorName = [...books].sort((a, b) =>
+  b.author.localeCompare(a.author)
+);
+
+const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating);
+
+const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);
+//42
+const sortByAscendingBalance = (users) => {
+  return [...users].sort((a, b) => a.balance - b.balance);
+};
+//43
+const sortByDescendingFriendCount = (users) => {
+  return [...users].sort((a, b) => b.friends.length - a.friends.length);
+};
+//44
+const sortByName = (users) => {
+  return [...users].sort((a, b) => a.name.localeCompare(b.name));
+};
